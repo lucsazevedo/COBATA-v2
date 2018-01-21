@@ -1,0 +1,13 @@
+<div class="slider">
+    <ul class="slides">
+      @foreach($slides as $slide)
+      <li onclick="window.location='{{$slide->link}}'">
+        <img src="{{ asset($slide->imagem)}}"> 
+        <div class="caption {{$slide->posicao_x}}-align">
+          <h3>{{$slide->titulo}}</h3>
+          <h5 class="light grey-text text-lighten-3">{{$slide->descricao}}</h5>
+        </div>
+      </li>
+      @endforeach
+    </ul>
+  </div>
